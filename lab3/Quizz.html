@@ -1,0 +1,111 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="estilos.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik&display=swap" rel="stylesheet">
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+</head>
+<body style="background-color:deepskyblue">
+    <header>
+        <h1 id="unico">Portimão</h1>
+        <img src="images/portimao-algarve-portugal.jpg">
+    </header>
+
+    <h3>Quizz</h3>
+
+    <nav>
+        <a href="../index.html"> <i class='fas fa-home'></i> Home |</a>
+        <a href="index.html"> <i class='fas fa-backward'></i> <b>Introdução</b> |</a>
+        <a href="local.html"> <i class='fas fa-map-marked-alt'></i> Localização |</a>
+        <a href="multimedia.html"> <i class='fab fa-instagram'></i> Multimédia |</a>
+        <a href="info.html"> <i class='fas fa-info-circle'></i> Informações |</a>
+        <a href="Quizz.html"> <i class='far fa-question-circle'></i> Quizz |</a>
+        <a href="html5-css.html"> <i class='fab fa-html5'></i> HTML e CSS</a>
+    </nav>
+
+    <p>Nesta página será feito um questionário, para testar os seus conhecimentos acerca da cidade de Portimão</p>
+
+    <form method="POST" action="mailto: seuemail@gmail.com" enctype="multipart/form-data" autocomplete="on">
+        <fieldset style="background-color:lightskyblue">
+            <legend class="importante"> Quizz de Portimão </legend>
+            <fieldset style="background-color:aquamarine">
+                <h3>Info</h3>
+                <p>Nome: <input type="text" name="nome" pattern=".{3,}" maxlength="15" autofocus required></p>
+                <p>Apelido: <input type="text" name="apelido" pattern=".{3,}" maxlength="15" required></p>
+                <p>E-mail: <input type="email" name="email" placeholder="seuemail@xxxxx.com" required autocomplete="off"></p>
+                <fieldset style="background-color:greenyellow">
+                    <h3>Perguntas</h3>
+
+                    <p><b>Quais destas praias se encontram em Portimão?</b></p>
+                    <p><input type="checkbox" id="praia1" name="praia" value="tamariz"> Praia do Tamariz</p>
+                    <p><input type="checkbox" id="praia2" name="praia" value="rocha"> Praia da Rocha</p>
+                    <p><input type="checkbox" id="praia3" name="praia" value="pescadores"> Praia dos Pescadores</p>
+                    <p><input type="checkbox" id="praia4" name="praia" value="carcavelos"> Praia de Carcavelos</p>
+                    <p><input type="checkbox" id="praia5" name="praia" value="vau"> Praia do Vau</p>
+                    <p><input type="checkbox" id="praia6" name="praia" value="tresirmaos"> Praia dos Três Irmãos</p>
+                    <p><input type="checkbox" id="praia7" name="praia" value="lota"> Praia da Lota</p>
+                    <p><input type="checkbox" id="praia8" name="praia" value="mantarota"> Praia da Manta rota</p>
+                    <br>
+
+                    <p><b>Qual o nome do autódromo que se encontra em Portimão?</b></p>
+                    <p><input type="radio" name="autodromo" value="CP"> Circuito Portimão</p>
+                    <p><input type="radio" name="autodromo" value="AIA"> Autódromo Internacional do Algarve</p>
+                    <p><input type="radio" name="autodromo" value="ANP"> Autódromo Nacional de Portimão</p>
+                    <p><input type="radio" name="autodromo" value="CIP"> Circuito Internacional do Algarve</p>
+                    <p><input type="radio" name="autodromo" value="AA"> Autódromo do Algarve</p>
+                    <br>
+
+                    <p><b>Indique a data em que se dá o feriado municipal de Portimão? (Coloque o ano em que se encontra)</b></p>
+                    <p>Data do Feriado Municipal: <input type="date" id="date" name="dateferiado" min="2022-01-01" max="2072-01-01"></p>
+                    <br>
+
+                    <p><b>Indique uma das cores presente no equipamento que o <i>Portimonense SC</i> usa quando joga em Casa!</b></p>
+                    <label for="equipcolor">Selecione uma das cores presente no equipamento:</label>
+                    <input type="color" id="equipcolor" name="equipcolor" value="#ff0000">
+                    <br>
+
+                    <p><b>Quantas voltas tem o Grande Prémio de Portimão de Moto GP?</b></p>
+                    <label for="numberlaps">Número de Voltas (entre 20 e 25)</label>
+                    <input type="number" id="numberlaps" name="numberlaps" min="20" max="25">
+                    <br>
+
+                    <p><b>Qual destas fotos é a cidade de Portimão?</b></p>
+                    <img src="images/porto.jpg">
+                    <img src="images/portimao.jpg">
+                    <br>
+                    <img src="images/cascais.jpg">
+                    <img src="images/lagos.jpg">
+                    <br>
+                    <label for="paisagem">Escolha a imagem correta:</label>
+                    <select name="paisagem" id="paisagem" size = 4 multiple>
+                    <option value="opcao1"> Opção 1 </option>
+                    <option value="opcao2"> Opção 2 </option>
+                    <option value="opcao3"> Opção 3 </option>
+                    <option value="opcao4"> Opção 4 </option>
+                    </select>
+                    <br>
+                    <br>
+                    <br>
+                    <label for="review">Comentários/Sugestões:</label>
+                    <textarea id="review" name="review" rows="4" cols="50"></textarea>
+                    <br>
+                    <br>
+                    <input type="submit" value="Submeter">
+                </fieldset>
+            </fieldset>
+        </fieldset>
+    </form>
+    <footer>
+        <address>
+            Realizado por: Tiago Silva a22102750;
+            Engª Infomática - 2ºAno - ULHT
+        </address>
+    </footer>
+</body>
+</html>

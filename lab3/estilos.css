@@ -1,0 +1,56 @@
+* {
+    font-family: 'Rubik', sans-serif;
+}
+
+h1 { /* tipo */
+    color: aquamarine;
+}
+
+h1::before {
+    content: &#127958;;
+}
+
+h2 {
+    color: yellow;
+}
+
+h3 {
+    color: darkgreen;
+}
+
+legend.importante { /* classe */
+    font-weight: bold;
+}
+
+#unico { /* id */
+    background-color: darkcyan;
+}
+
+a[target=_blank] {
+    background-color: yellow;
+}
+
+a:link {
+    color: dodgerblue;
+}
+
+a:visited {
+    color: lightsalmon;
+}
+
+a:hover { /* pseudo-classe */
+    background-color: midnightblue;
+    color: greenyellow;
+}
+
+a:active {
+    color: red;
+}
+
+p::first-letter { /* pseudo-elemento */
+    font-size: 1.5em;
+}
+
+tr {
+    background-color: mediumseagreen;
+}
