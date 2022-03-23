@@ -5,59 +5,68 @@
     <title>Relatório de todas as informações pedidas relativamente ao lab 1</title>
 </head>
 <body>
-    <h1> A Internet e a Web </h1>
-    <p> <a href="../index.html">&#128073; Laboratórios PW &#128072;</a></p>
-    <p> <a href="index.html">&#128073; Programação Web &#128072;</a> </p>
+<h1> A Internet e a Web </h1>
+<p><a href="../index.html">&#128073; Laboratórios PW &#128072;</a></p>
+<p><a href="index.html">&#128073; Programação Web &#128072;</a></p>
 
-    <h2> Conhecer a Internet </h2>
-    <ul>
-        <li> Endereço IP do PC &#128071;</li>
-        <img src="images/ip-pc.png"> <img src="images/ip-pc-map.png">
+<h2> Conhecer a Internet </h2>
+<ul>
+    <li> Endereço IP do PC &#128071;</li>
+    <img src="images/ip-pc.png"> <img src="images/ip-pc-map.png">
 
-        <li> Endereço IP do Telemóvel &#128071;</li>
-        <img src="images/ip-tele.png"> <img src="images/ip-tele-map.png">
+    <li> Endereço IP do Telemóvel &#128071;</li>
+    <img src="images/ip-tele.png"> <img src="images/ip-tele-map.png">
 
-        <li> Endereço IP do Servidor Heroku, onde a App se encontra &#128071;</li>
-        <img src="images/ip-sv.png"> <img src="images/ip-sv-map.png">
+    <li> Endereço IP do Servidor Heroku, onde a App se encontra &#128071;</li>
+    <img src="images/ip-sv.png"> <img src="images/ip-sv-map.png">
 
-        <li> Percurso </li>
-        <p> Neste caso, vamos ver que rota os pacotes IP fazem, desde o nosso computador (Portugal) até um endereço IP destino/ou URL que especifique <a href="index.html">(https://a22102750-pw-lab1.herokuapp.com)</a>.</p>
-        <ol>
-            <li> PT - Prior Velho (0 ms) </li>
-            <li> PT - Lisboa (2 ms) </li>
-            <li> DE - Frankfurt (1 ms) </li>
-        </ol>
-        <p> Como podemos ver nas imagens anteriores, o local do servidor em que App se encontra é em Dublin, Irlanda.
-            No entanto, os pacotes IP apenas vão até a Frankfurt, Alemanha. Na imagem abaixo, podemos ver que durante
-            a transferência de pacotes IP, ocorreu um erro em Prior Velho, que muito provavelmente foi o principal
-            responsável para os pacotes não chegarem ao seu destino.</p>
-        <img src="images/geotracer-map.png"> <img src="images/geotracer.png">
+    <li> Percurso</li>
+    <p> Neste caso, vamos ver que rota os pacotes IP fazem, desde o nosso computador (Portugal) até um endereço IP
+        destino/ou URL que especifique <a href="index.html">(https://a22102750-pw-lab1.herokuapp.com)</a>.</p>
+    <ol>
+        <li> PT - Prior Velho (0 ms)</li>
+        <li> PT - Lisboa (2 ms)</li>
+        <li> DE - Frankfurt (1 ms)</li>
+    </ol>
+    <p> Como podemos ver nas imagens anteriores, o local do servidor em que App se encontra é em Dublin, Irlanda.
+        No entanto, os pacotes IP apenas vão até a Frankfurt, Alemanha. Na imagem abaixo, podemos ver que durante
+        a transferência de pacotes IP, ocorreu um erro em Prior Velho, que muito provavelmente foi o principal
+        responsável para os pacotes não chegarem ao seu destino.</p>
+    <img src="images/geotracer-map.png"> <img src="images/geotracer.png">
 
-        <li> HTTP </li>
-        <p> Após análise do código recebido e do código realizado, até então, foi determinado que o código recebido era exatamente igual ao realizado no IDE </p>
-        <img src="images/code.png">
+    <li> HTTP</li>
+    <p> Após análise do código recebido e do código realizado, até então, foi determinado que o código recebido era
+        exatamente igual ao realizado no IDE </p>
+    <img src="images/code.png">
 
-        <li> Inspect </li>
-        <p> Depois, de aceder ao <i>browser developer tool</i> e selecionar a barra <i>network</i> foi possível obter informações
+    <li> Inspect</li>
+    <p> Depois, de aceder ao <i>browser developer tool</i> e selecionar a barra <i>network</i> foi possível obter
+        informações
         acerca dos ficheiros carregados para o browser. Como podemos ver na imagem abaixo.</p>
-        <img src="images/bdt.png">
-        <p> Através da análise da imagem é nos possível retirar algumas informações, como por exemplo, a quantidade de
-        ficheiros descarregados, que neste caso foram apenas 2, sendo o primerio do tipo <i>document</i> e o segundo do tipo
-        <i>png</i>, o tempo de espera e de descarga do primeiro ficheiro foi, respetivamente de 61.37 ms e de 63.75 ms, já
+    <img src="images/bdt.png">
+    <p> Através da análise da imagem é nos possível retirar algumas informações, como por exemplo, a quantidade de
+        ficheiros descarregados, que neste caso foram apenas 2, sendo o primerio do tipo <i>document</i> e o segundo do
+        tipo
+        <i>png</i>, o tempo de espera e de descarga do primeiro ficheiro foi, respetivamente de 61.37 ms e de 63.75 ms,
+        já
         o segundo ficheiro obteve em ambos os tempos o valor de 0 ms. </p>
-        <p> Depois de selecionado cada ficheiro descarregado, na barra <i>preview</i> é nos possível observar, como nos diz
-            a palavra uma previsão do conteúdo de cada ficheiro. De seguida, na barra dos <i>Headers</i> é nos possível obter algumas informações, como por exemplo,
-            o URL em que foi carregado, o seu Remote Adress, o Status Code, entre outros. E por último, na barra <i>Timing</i> é possível ver, todos os tempos
-            desde o começo do carregamento do ficheiro para o browser até à sua conclusão. </p>
-        <ul>
-            <li> Primeiro ficheiro &#128071; </li>
-            <img src="images/f1-headers.png"> <img src="images/f1-preview.png"> <img src="images/f1-timing.png">
+    <p> Depois de selecionado cada ficheiro descarregado, na barra <i>preview</i> é nos possível observar, como nos diz
+        a palavra uma previsão do conteúdo de cada ficheiro. De seguida, na barra dos <i>Headers</i> é nos possível
+        obter algumas informações, como por exemplo,
+        o URL em que foi carregado, o seu Remote Adress, o Status Code, entre outros. E por último, na barra
+        <i>Timing</i> é possível ver, todos os tempos
+        desde o começo do carregamento do ficheiro para o browser até à sua conclusão. </p>
+    <ul>
+        <li> Primeiro ficheiro &#128071;</li>
+        <img src="images/f1-headers.png"> <img src="images/f1-preview.png"> <img src="images/f1-timing.png">
 
-            <li> Segundo ficheiro &#128071; </li>
-            <img src="images/f2-headers.png"> <img src="images/f2-preview.png"> <img src="images/f2-timing.png">
-        </ul>
+        <li> Segundo ficheiro &#128071;</li>
+        <img src="images/f2-headers.png"> <img src="images/f2-preview.png"> <img src="images/f2-timing.png">
     </ul>
-    <p> Para obter os IPs pedidos foi usada a seguinte ferramenta &#128073; <a href =https://whatismyipaddress.com/ip-lookup> IP Lookup </a></p>
-    <p> Para obter a rota dos pacotes IP foi utilizada a seguinte ferramenta &#128073; <a href =https://geotraceroute.com> GeoTraceRoute </a></p>
+</ul>
+<p> Para obter os IPs pedidos foi usada a seguinte ferramenta &#128073; <a href=https://whatismyipaddress.com/ip-lookup>
+    IP Lookup </a></p>
+<p> Para obter a rota dos pacotes IP foi utilizada a seguinte ferramenta &#128073; <a href=https://geotraceroute.com>
+    GeoTraceRoute </a></p>
 </body>
 </html>

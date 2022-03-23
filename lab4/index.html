@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+    <style>
+        * {box-sizing: border-box;}
+
+        @import url('https://fonts.googleapis.com/css2?family=Fredoka&display=swap');
+        * {font-family: 'Fredoka', sans-serif;}
+
+        .capitais {
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: space-around;
+            align-items: space-around;
+            background-color: aliceblue;
+            padding: 50px;
+        }
+
+        .capitais > div {
+            display: flex;
+            justify-content: space-around;
+            border-radius: 20px;
+            box-shadow: 5px 5px 15px #888888;
+            margin: 10px;
+        }
+
+        .capitais img {
+            border-radius: 20px 0 0 20px;
+            height: 100%;
+        }
+
+        .capitais div div:last-child {
+            width: 150px;
+            background-color: white;
+            padding: 20px;
+            border-radius: 0 20px 20px 0;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .menu {
+            display: flex;
+        }
+
+        .menu a:last-child {
+            margin-left: auto;
+        }
+
+        .menu a {
+            padding: 20px;
+            text-decoration: none;
+            text-decoration-color: aquamarine;
+        }
+
+        .menu a:hover {
+            background-color: gainsboro;
+            font-weight: bold;
+        }
+
+        .cabecalho {
+            display: flex;
+            background-image: url("images/aviao.jpeg");
+            color: white;
+            height: 600px;
+            justify-content: center;
+            align-items: center;
+            font-size: 2rem;
+        }
+
+        .dicas {
+            display: flex;
+            flex-flow: row wrap;
+        }
+
+        .dicas > div {
+            display: flex;
+            width: 388px;
+            height: 388px;
+            justify-content: space-around;
+            border-radius: 20px;
+            box-shadow: 5px 5px 15px #888888;
+            margin: 10px;
+            padding: 10px 20px;
+            background-color: aliceblue;
+        }
+
+        .destinos {
+            display: grid;
+            background-color: aliceblue;
+            width: 275;
+            height: 275;
+            grid-gap: 10px;
+
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            grid-template-rows: 1fr 1fr;
+        }
+
+        .destinos > div {
+            justify-content: space-around;
+            opacity: 88%;
+            filter: brightness(72%);
+            text-align: center;
+            padding: 10px 20px;
+            box-shadow: 5px 5px 15px #888888;
+            margin: 5px;
+            border-radius: 7px;
+        }
+
+        .lisboa {
+            background-image: url("images/lisboa.jpg");
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center center;
+            grid-area: lisboa;
+            position: relative;
+        }
+
+        .porto {
+            background-image: url("images/porto.jpg");
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center center;
+            grid-area: porto;
+            position: relative;
+        }
+
+        .aveiro {
+            background-image: url("images/aveiro.png");
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center center;
+            grid-area: aveiro;
+            position: relative;
+        }
+
+        .madeira {
+            background-image: url("images/madeira.jpg");
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center center;
+            grid-area: madeira;
+            position: relative;
+        }
+
+        .albufeira {
+            background-image: url("images/albufeira.jpg");
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center center;
+            grid-area: albufeira;
+            position: relative;
+        }
+
+        @media only screen and (min-width: 901px) {
+            .destinos {
+                background-color: aliceblue;
+                display: grid;
+                width: 100vw;
+                height: 70vh;
+                grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+                grid-auto-rows: 1fr 1fr 1fr 1fr 1fr;
+                grid-template-areas:
+                    'lisboa porto aveiro acampamento acampamento'
+                    'madeira madeira albufeira acampamento acampamento';
+                grid-gap: 7px;
+            }
+        }
+
+        .destinos p {
+            color: white;
+            font-family: 'Holtwood One SC', serif;
+            font-size: 12px;
+            position: absolute;
+            bottom: 0;
+            left: 5px;
+        }
+
+        .destinos h2 {
+            color: white;
+            font-family: 'Holtwood One SC', serif;
+            font-size: 16px;
+            position: absolute;
+            top: 0;
+            left: 7px;
+            font-size: 10px;
+        }
+
+        .destinos h3 {
+            color: white;
+            font-family: 'Holtwood One SC', serif;
+            font-size: 16px;
+            position: absolute;
+            bottom: 12px;
+            left: 5px;
+            font-size: 15px;
+        }
+
+        @media only screen and (max-width: 900px) {
+            .destinos {
+                background-color: aliceblue;
+                display: grid;
+                width: 100vw;
+                height: 70vh;
+                grid-template-columns: 1fr 1fr;
+                grid-auto-rows: 1fr 1fr;
+                grid-template-areas:
+                'lisboa porto'
+                'aveiro albufeira'
+                'madeira madeira'
+                'acampamento acampamento'
+                'acampamento acampamento';
+                grid-gap: 7px;
+            }
+        }
+
+        .acampamento {
+            grid-area: acampamento;
+            background-color: white;
+        }
+
+        .acampamento div {
+            padding: 10px 20px;
+            justify-content: space-around;
+            box-shadow: none;
+            margin: unset;
+        }
+
+        .acampamento h1 {
+            background-color: white;
+            color: black;
+            position: absolute;
+            left: 0;
+        }
+
+        .acampamento p {
+            background-color: white;
+            color: black;
+            font-size: 16px;
+            position: absolute;
+            top: 400px;
+        }
+
+        .acampamento img {
+            max-width: 100%;
+            max-height: 100%;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center center;
+        }
+
+        .button {
+            border: none;
+            color: black;
+            padding: 15px 31px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 13px;
+            margin: 4px 2px;
+            cursor: pointer;
+            position: absolute;
+            right: 15px;
+            bottom: 0;
+        }
+
+    </style>
+    <title>Capitais Europeias</title>
+</head>
+<body>
+<nav class="menu">
+    <a href="">Cidades Europeias</a>
+    <a href="">Dicas Para Viajar</a>
+    <a href="">Destinos de Sonho</a>
+    <a href="../index.html">Home</a>
+</nav>
+
+<div class="cabecalho">
+    <div><h1> Just Travel & don't worry </h1></div>
+</div>
+
+<h1>Capitais europeias</h1>
+
+<div class="capitais">
+    <div>
+        <div><img src="images/bruxelas.avif" alt=""></div>
+        <div><p> Bruxelas </p></div>
+    </div>
+
+    <div>
+        <div><img src="images/budapeste.avif" alt=""></div>
+        <div><p> Budapeste </p></div>
+    </div>
+
+    <div>
+        <div><img src="images/lisboa.avif" alt=""></div>
+        <div><p> Lisboa </p></div>
+    </div>
+
+    <div>
+        <div><img src="images/londres.avif" alt=""></div>
+        <div><p> Londres </p></div>
+    </div>
+
+    <div>
+        <div><img src="images/milao.avif" alt=""></div>
+        <div><p> Milão </p></div>
+    </div>
+
+    <div>
+        <div><img src="images/paris.avif" alt=""></div>
+        <div><p> Paris </p></div>
+    </div>
+
+    <div>
+        <div><img src="images/praga.avif" alt=""></div>
+        <div><p> Praga </p></div>
+    </div>
+
+    <div>
+        <div><img src="images/reykiavik.avif" alt=""></div>
+        <div><p> Reykjavik </p></div>
+    </div>
+
+    <div>
+        <div><img src="images/roma.avif" alt=""></div>
+        <div><p> Roma </p></div>
+    </div>
+
+    <div>
+        <div><img src="images/varsovia.avif" alt=""></div>
+        <div><p> Varsovia </p></div>
+    </div>
+
+    <div>
+        <div><img src="images/viena.avif" alt=""></div>
+        <div><p> Viena </p></div>
+    </div>
+</div>
+
+<h1> Dicas para viajantes </h1>
+<div class="dicas">
+    <div>
+        <div><h1><i class='fas fa-camera'></i> Leve consigo fotografias tipo passaporte </h1>
+            <p> Pesam perto de zero e não ocupam nenhum espaço. Mas podem dar muito jeito e nunca se sabe quando. </p>
+        </div>
+    </div>
+
+    <div>
+        <div><h1><i class='fas fa-language'></i> Aprenda algumas frases na língua do país onde vai viajar </h1>
+            <p> Mesmo que não tenho jeito nenhum para línguas, faça um esforço e aprenda algumas frases. Se não
+                conseguir,
+                então pelo menos o básico. “Sim”, “Não”, “obrigado”, “bom-dia”. </p></div>
+    </div>
+
+    <div>
+        <div><h1><i class='fas fa-luggage-cart'></i> Mantenha os seus bens mais preciosos consigo </h1>
+            <p> Se não conseguir viajar de forma tão leve que transporte apenas uma pequena mochila, digamos, de 35
+                litros
+                ou menos, deverá dividir os seus pertences por duas peças de bagagem.
+                A mala principal, para as coisas mais volumosas, mais facilmente substituíveis e de menos valor
+                (especialmente as roupas) e outra, mais pequena, que transportará sempre consigo</p></div>
+    </div>
+
+    <div>
+        <div><h1><i class='fas fa-user-shield'></i> Leve a sério o seguro de viagem </h1>
+            <p> Não é preciso comprar um seguro de viagem que cubra tudo e mais alguma coisa com coberturas
+                elevadíssimas.
+                Mas mesmo os mais ousados deverão ter em conta que azares acontecem, e um pequeno problema, como um pé
+                partido, poderá custar uma fortuna se for apanhado desprevenido. </p></div>
+    </div>
+
+    <div>
+        <div><h1><i class='fas fa-gem'></i> Não leve consigo nada cuja perda não possa suportar </h1>
+            <p> As perdas e roubos são uma constante das viagens.
+                Fazem parte, acontecem a todos os viajantes crónicos.
+                De diversas formas e com gravidade variante, quase todos nós já perdemos algo ou já fomos roubados
+                algures
+                no mundo. </p></div>
+    </div>
+
+    <div>
+        <div><h1><i class='fas fa-money-bill-alt'></i><i class='fas fa-exchange-alt'></i><i
+                class='far fa-money-bill-alt'></i> Não troque dinheiro nos pontos de entrada de um país </h1>
+            <p> Mesmo que seja daqueles que não confia em caixas de Multibanco ou que os seus destinos exijam que troque
+                dinheiro vivo, tente não o fazer logo à entrada do país.
+                É claro que precisará de uma certa quantia, para as primeiras despesas.
+                Mas de uma forma geral as taxas de câmbio disponíveis são muito penalizantes para o cliente. Pesquise,
+                pergunte a pessoas locais. </p></div>
+    </div>
+
+    <div>
+        <div><h1><i class='fas fa-map-marked-alt'></i> Aproveite os transbordos para visitar mais locais </h1>
+            <p> Seja de avião ou de comboio, considere que de cada vez que mudar de um veículo para o outro está a ter
+                uma
+                oportunidade para visitar um novo local. </p></div>
+    </div>
+
+    <div>
+        <div><h1><i class='fas fa-id-card'></i> Mantenha uma cópia dos documentos mais importantes </h1>
+            <p> Para ter a certeza que em caso de azar os poderá, de certa forma, recuperar, coloque os seus documentos
+                mais
+                importantes num espaço como o Dropbox ou o Google Drive ou simplesmente envie-os para uma conta de
+                e-mail do
+                tipo Gmail ou Hotmail.
+                Assim, se acontecer o pior e perder, por exemplo, o seu passaporte, torna-se mais fácil o processo de
+                obtenção de um documento de viagem junto da sua embaixada. </p></div>
+    </div>
+</div>
+
+<h1> Destinos de Sonho </h1>
+<div class="destinos">
+    <div class="lisboa">
+        <h2><b> Food & Drink </b></h2>
+        <h3><b> Lisboa </b></h3>
+        <p><b> Desde 50€ noite</b></p>
+    </div>
+
+    <div class="porto">
+        <h2><b> Food & Drink </b></h2>
+        <h3><b> Porto </b></h3>
+        <p><b> Desde 45€ noite </b></p>
+    </div>
+
+    <div class="aveiro">
+        <h2><b> Activities </b></h2>
+        <h3><b> Aveiro </b></h3>
+        <p><b> Desde 527€ seis noites </b></p>
+    </div>
+
+    <div class="madeira">
+        <h2><b> Sightseeing </b></h2>
+        <h3><b> Funchal </b></h3>
+        <p><b> Desde 315€ três noites </b></p>
+    </div>
+
+    <div class="albufeira">
+        <h2><b> Beach & Activities </b></h2>
+        <h3><b> Albufeira </b></h3>
+        <p><b> Desde 70€ noite</b></p>
+    </div>
+
+    <div class="acampamento">
+        <div><img src="images/acampamento.jpeg"></div>
+        <div>
+            <h1><b> Procuras uma viagem mais em conta? </b></h1>
+            <p> Vê todas as nossas ofertas e viaja para sítios onde nunca pensaste ir a preços reduzidos. </p>
+        </div>
+        <div>
+            <button type="button" class="button">Saiba mais</button>
+        </div>
+    </div>
+</div>
+</body>
+</html>

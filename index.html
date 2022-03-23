@@ -3,18 +3,56 @@
 <head>
     <meta charset="UTF-8">
     <title>PW Labs</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Chelsea+Market&display=swap');
+        * {font-family: 'Chelsea Market', cursive;}
+
+        * {background-color: black;}
+
+        @media only screen and (min-width: 901px) {
+            .image img{
+                width: 315px;
+                height: 315px;
+                position: relative;
+                top: -187px;
+                right: -727px;
+            }
+        }
+
+        @media only screen and (max-width: 900px) {
+            .image img{
+                width: 315px;
+                height: 315px;
+                position: relative;
+                bottom: 0;
+                left: 31px;
+            }
+        }
+    </style>
 </head>
 <body>
-    <nav>
-        <h1>Programação Web: Laboratórios</h1>
+<nav>
+    <h1 style="color:white">Programação Web: Laboratórios</h1>
 
-        <ul>
-            <li> <a href="lab1"> Laboratório 1: Conhecer a Internet com a minha primeira página Web </a></li>
-            <li> <a href="lab2"> Laboratório 2: Explorando o HTML com o meu primeiro website </a></li>
-            <li> <a href="lab3"> Laboratório 3: Website com Quizz e seletores CSS </a></li>
-        </ul>
+    <ul>
+        <li style="color:white"><a href="lab1"><i class='fas fa-atlas'></i> Laboratório 1: Conhecer a Internet com a
+            minha primeira página Web </a></li>
+        <li style="color:white"><a href="lab2"><i class='fab fa-html5'></i> Laboratório 2: Explorando o HTML com o meu
+            primeiro website </a></li>
+        <li style="color:white"><a href="lab3"><i class='fas fa-question-circle'></i><i class='fab fa-css3-alt'></i>
+            Laboratório 3: Website com Quizz e seletores CSS </a></li>
+        <li style="color:white"><a href="lab4"><i class='fas fa-plane-departure'></i> Laboratório 4: SPA com layout
+            responsivo baseado em Flexbox e Grid </a></li>
+    </ul>
+</nav>
 
-        <footer><p> Tiago Silva, a22102750, Engenharia Informática - 2ºAno - ULHT </p></footer>
-    </nav>
+<footer><p style="color:white"> Tiago Silva, a22102750, Engenharia Informática - 2ºAno - ULHT </p></footer>
+
+<div class="image">
+    <img src="wordcloud.jpg">
+</div>
 </body>
 </html>
