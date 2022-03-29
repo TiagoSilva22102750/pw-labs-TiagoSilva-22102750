@@ -45,6 +45,12 @@
 
         .menu {
             display: flex;
+            height: 6vh;
+            background: #434343;
+            color: #434343;
+            position: sticky;
+            top: 0;
+            align-items: center;
         }
 
         .menu a:last-child {
@@ -55,6 +61,8 @@
             padding: 20px;
             text-decoration: none;
             text-decoration-color: aquamarine;
+            color: white;
+            font-size: 12px;
         }
 
         .menu a:hover {
@@ -62,14 +70,17 @@
             font-weight: bold;
         }
 
-        .cabecalho {
+        .heroimage {
             display: flex;
             background-image: url("images/aviao.jpeg");
             color: white;
-            height: 600px;
+            height: 90vh;
             justify-content: center;
             align-items: center;
             font-size: 2rem;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
         }
 
         .dicas {
@@ -176,6 +187,7 @@
             position: absolute;
             bottom: 0;
             left: 5px;
+            font-weight: 900;
         }
 
         .destinos h2 {
@@ -186,6 +198,7 @@
             top: 0;
             left: 7px;
             font-size: 10px;
+            font-weight: 900;
         }
 
         .destinos h3 {
@@ -196,6 +209,7 @@
             bottom: 12px;
             left: 5px;
             font-size: 15px;
+            font-weight: 900;
         }
 
         @media only screen and (max-width: 900px) {
@@ -268,6 +282,21 @@
             bottom: 0;
         }
 
+        .parallax {
+            /* The image used */
+            background-image: url("nuvens.jpg");
+
+            /* Set a specific height */
+            min-height: 200px;
+
+            /* Create the parallax scrolling effect */
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+
 
     </style>
     <title>Capitais Europeias</title>
@@ -280,7 +309,7 @@
     <a href="../index.html">Home</a>
 </nav>
 
-<div class="cabecalho">
+<div class="heroimage">
     <div><h1> Just Travel & don't worry </h1></div>
 </div>
 
@@ -342,6 +371,8 @@
         <div><p> Viena </p></div>
     </div>
 </div>
+
+<div class="parallax"></div>
 
 <h1> Dicas para viajantes </h1>
 <div class="dicas">
@@ -413,6 +444,8 @@
     </div>
 </div>
 
+<div class="parallax"></div>
+
 <h1> Destinos de Sonho </h1>
 <div class="destinos">
     <div class="lisboa">
@@ -452,7 +485,7 @@
         <p> Vê todas as nossas ofertas e viaja para sítios onde nunca pensaste ir a preços reduzidos. </p>
 
         <br>
-            <button type="button" class="button">Saiba mais</button>
+        <button type="button" class="button">Saiba mais</button>
 
     </div>
 </div>
