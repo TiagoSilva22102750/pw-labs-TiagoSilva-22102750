@@ -35,26 +35,13 @@
             }
         }
 
-        .showcase {
-            position: absolute;
-            right: 0;
-            width: 100%;
-            min-height: 100vh;
-            display: flex;
-            justify-content: space-between;
+        .heroimage {
+            height: 100vh;
+            background-image: url("stars.jpeg");
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
             align-items: center;
-            background: #111;
-            color: #fff;
-            z-index: 2;
-        }
-
-        .showcase video {
-           position: absolute;
-           top: 0;
-           left: 0;
-           width: 100%;
-           height: 100%;
-           object-fit: cover;
         }
 
         .text {
@@ -63,52 +50,114 @@
         }
 
         .foot {
-            position: absolute;
+            position: relative;
             bottom: 0;
             z-index: 10;
         }
 
-        .text h1 {
+        .heroimage h1 {
             font-size: 4em;
             font-weight: 3157;
             line-height: 1em;
             text-transorm: uppercase;
+            align-items: center;
+            text-align: center;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .heroimage p {
+            font-size: 1em;
+            font-weight: 3157;
+            line-height: 1em;
+            text-transorm: uppercase;
+            text-align: center;
+            position: absolute;
+            top: 57%;
+            left: 50%;
+            transform: translate(-50%, -50%);
         }
 
         .text a {
-            color: white;
+            color: black;
             font-weight: 3157;
             font-size: 19px;
+        }
+
+        .sky-parallax {
+            /* The image used */
+            background-image: url("nuvens.jpg");
+
+            /* Set a specific height */
+            min-height: 200px;
+
+            /* Create the parallax scrolling effect */
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        .heroimage button {
+            width: 50%;
+            max-width: 200px;
+            height: 64px;
+            padding: 0;
+            margin: 0 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 16px;
+            font-size: 1rem;
+            position: absolute;
+            top: 67%;
+            left: 50%;
+            transform: translate(-50%, -50%);
         }
 
     </style>
 </head>
 <body>
-<section class="showcase">
-    <video src="video.mp4" muted loop autoplay></video>
-
-    <nav class="text">
-        <h1 style="color:white">Programação Web: Laboratórios</h1>
-        <ul>
-            <li style="color:white"><a href="lab1"><i class='fas fa-atlas'></i> Laboratório 1: Conhecer a Internet com a
-                minha primeira página Web </a></li>
-            <li style="color:white"><a href="lab2"><i class='fab fa-html5'></i> Laboratório 2: Explorando o HTML com o
-                meu
-                primeiro website </a></li>
-            <li style="color:white"><a href="lab3"><i class='fas fa-question-circle'></i><i class='fab fa-css3-alt'></i>
-                Laboratório 3: Website com Quizz e seletores CSS </a></li>
-            <li style="color:white"><a href="lab4"><i class='fas fa-plane-departure'></i> Laboratório 4: SPA com layout
-                responsivo baseado em Flexbox e Grid </a></li>
-            <li style="color:white"><a href="lab5"><i class='fas fa-plane-departure'></i><i class='fas fa-edit'></i> Laboratório 5: SPA aplicando
-                principios de web design </a></li>
-        </ul>
-    </nav>
-
-    <footer class="foot"><p style="color:white"> Tiago Silva, a22102750, Engenharia Informática - 2ºAno - ULHT </p></footer>
-
-    <div class="image">
-        <img src="wordcloud.jpg">
+<div class="heroimage">
+    <h1 style="color:white">Programação Web</h1>
+    <p style="color:white"> A disciplina onde a tua critividade é varolizada!</p>
+    <div class="button">
+        <button type="button"> <a href="#laboratorios" style="color: black; text-decoration: none;">Laboratórios</a> </button>
     </div>
-</section>
+</div>
+
+<div class="image">
+    <img src="wordcloud.jpg">
+</div>
+
+<div class="sky-parallax"></div>
+
+<div class="text" id="laboratorios">
+    <br>
+    <br>
+    <ul>
+        <li style="color:white"><a href="lab1"><i class='fas fa-atlas'></i> Laboratório 1: Conhecer a Internet com a
+            minha primeira página Web </a></li>
+        <li style="color:white"><a href="lab2"><i class='fab fa-html5'></i> Laboratório 2: Explorando o HTML com o
+            meu
+            primeiro website </a></li>
+        <li style="color:white"><a href="lab3"><i class='fas fa-question-circle'></i><i class='fab fa-css3-alt'></i>
+            Laboratório 3: Website com Quizz e seletores CSS </a></li>
+        <li style="color:white"><a href="lab4"><i class='fas fa-plane-departure'></i> Laboratório 4: SPA com layout
+            responsivo baseado em Flexbox e Grid </a></li>
+        <li style="color:white"><a href="lab5"><i class='fas fa-plane-departure'></i><i class='fas fa-edit'></i>
+            Laboratório 5: SPA aplicando
+            principios de web design </a></li>
+    </ul>
+    <br>
+    <br>
+</div>
+
+<div class="sky-parallax"></div>
+
+<footer class="foot"><p style="color:black; font-size:.8em;"> Tiago Silva, a22102750, Engenharia Informática - 2ºAno - ULHT 2022 </p></footer>
+
 </body>
 </html>

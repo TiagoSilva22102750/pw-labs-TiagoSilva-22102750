@@ -74,7 +74,7 @@
             display: flex;
             background-image: url("images/aviao.jpeg");
             color: white;
-            height: 90vh;
+            height: 94vh;
             justify-content: center;
             align-items: center;
             font-size: 2rem;
@@ -296,6 +296,253 @@
             background-size: cover;
         }
 
+        .fotos {
+            display: flex;
+            flex-wrap: wrap;
+            padding: 0 4px;
+        }
+
+        /* Create four equal columns that sits next to each other */
+        .column {
+            flex: 25%;
+            max-width: 25%;
+            padding: 0 4px;
+        }
+
+        .column img {
+            margin-top: 8px;
+            vertical-align: middle;
+            transition:
+        }
+
+        /* Responsive layout - makes a two column-layout instead of four columns */
+        @media screen and (max-width: 900px) {
+            .column {
+                flex: 50%;
+                max-width: 50%;
+            }
+        }
+
+        /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+        @media screen and (max-width: 600px) {
+            .column {
+                flex: 100%;
+                max-width: 100%;
+            }
+        }
+
+        @media screen and (min-width: 901px) {
+            .column {
+                flex: 25%;
+                max-width: 25%;
+            }
+        }
+
+        .overlay {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 100%;
+            width: 100%;
+            opacity: 0;
+            transition: .5s ease;
+            background-color: black;
+        }
+
+        .text {
+            color: white;
+            font-size: 20px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            -webkit-transform: translate(-50%, -50%);
+            -ms-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+            text-align: center;
+        }
+
+        .parisstreet {
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center center;
+            grid-area: lisboa;
+            position: relative;
+            width:100%;
+        }
+
+        .parisstreet:hover .overlay {
+            opacity: 0.7;
+        }
+
+        .italy {
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center center;
+            grid-area: lisboa;
+            position: relative;
+            width:100%;
+        }
+
+        .italy:hover .overlay {
+            opacity: 0.7;
+        }
+
+        .louvre {
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center center;
+            grid-area: lisboa;
+            position: relative;
+            width:100%;
+        }
+
+        .louvre:hover .overlay {
+            opacity: 0.7;
+        }
+
+        .dinner {
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center center;
+            grid-area: lisboa;
+            position: relative;
+            width:100%;
+        }
+
+        .dinner:hover .overlay {
+            opacity: 0.7;
+        }
+
+        .camping {
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center center;
+            grid-area: lisboa;
+            position: relative;
+            width:100%;
+        }
+
+        .camping:hover .overlay {
+            opacity: 0.7;
+        }
+
+        .NewYork {
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center center;
+            grid-area: lisboa;
+            position: relative;
+            width:100%;
+        }
+
+        .NewYork:hover .overlay {
+            opacity: 0.7;
+        }
+
+        .trail {
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center center;
+            grid-area: lisboa;
+            position: relative;
+            width:100%;
+        }
+
+        .trail:hover .overlay {
+            opacity: 0.7;
+        }
+
+        .night {
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center center;
+            grid-area: lisboa;
+            position: relative;
+            width:100%;
+        }
+
+        .night:hover .overlay {
+            opacity: 0.7;
+        }
+
+        .jungle {
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center center;
+            grid-area: lisboa;
+            position: relative;
+            width:100%;
+        }
+
+        .jungle:hover .overlay {
+            opacity: 0.7;
+        }
+
+        .beach {
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center center;
+            grid-area: lisboa;
+            position: relative;
+            width:100%;
+        }
+
+        .beach:hover .overlay {
+            opacity: 0.7;
+        }
+
+        .santorini {
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center center;
+            grid-area: lisboa;
+            position: relative;
+            width:100%;
+        }
+
+        .santorini:hover .overlay {
+            opacity: 0.7;
+        }
+
+        .boreal {
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center center;
+            grid-area: lisboa;
+            position: relative;
+            width:100%;
+        }
+
+        .boreal:hover .overlay {
+            opacity: 0.7;
+        }
+
+        .animacoes {
+            display: grid;
+            background-color: aliceblue;
+            grid-gap: 10px;
+            width: 315px;
+            height: 315px;
+
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 1fr 1fr;
+        }
+
+        .animacoes img {
+            border-radius: 50%;
+            animation-name: roda-encolhe;
+            animation-duration: 2.7s;
+            animation-iteration-count: infinite;
+            animation-timing-function: linear;
+        }
+
+        @keyframes roda-encolhe {
+            0% {transform: rotate(0deg); width: 200px;}
+            50% {transform: rotate(180deg);  width: 100px;}
+            100% {transform: rotate(360deg);  width: 200px;}
+        }
 
 
     </style>
@@ -452,6 +699,7 @@
         <h2><b> Food & Drink </b></h2>
         <h3><b> Lisboa </b></h3>
         <p><b> Desde 50€ noite</b></p>
+
     </div>
 
     <div class="porto">
@@ -488,6 +736,111 @@
         <button type="button" class="button">Saiba mais</button>
 
     </div>
+</div>
+
+<div class="parallax"></div>
+
+<div class="fotos">
+    <div class="column">
+        <div class="louvre">
+            <img src="images/louvre.jpg" style="width:100%">
+            <div class="overlay">
+                <div class="text"><b>Michael Fousert</b></div>
+            </div>
+        </div>
+
+
+        <div class="beach">
+            <img src="images/beach.jpg" style="width:100%">
+            <div class="overlay">
+                <div class="text"><b>Jared Rice</b></div>
+            </div>
+        </div>
+
+        <div class="santorini">
+            <img src="images/santorini.jpg" style="width:100%">
+            <div class="overlay">
+                <div class="text"><b>Jonathan Gallegos</b></div>
+            </div>
+        </div>
+
+        <div class="boreal">
+            <img src="images/boreal.jpg" style="width:100%">
+            <div class="overlay">
+                <div class="text"><b>Luke Stackpoole</b></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="column">
+        <div class="parisstreet">
+            <img src="images/parisstreet.jpg" style="width:100%">
+            <div class="overlay">
+                <div class="text"><b>Earth</b></div>
+            </div>
+        </div>
+
+        <div class="dinner">
+            <img src="images/dinner.jpg" style="width:100%">
+            <div class="overlay">
+                <div class="text"><b>Igor Oliyarnik</b></div>
+            </div>
+        </div>
+
+        <div class="jungle">
+            <img src="images/jungle.jpg" style="width:100%">
+            <div class="overlay">
+                <div class="text"><b>Oliver Sjöström</b></div>
+            </div>
+        </div>
+
+        <div class="camping">
+            <img src="images/camping.jpg" style="width:100%">
+            <div class="overlay">
+                <div class="text"><b>Tommy Lisbin</b></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="column">
+        <div class="italy">
+            <img src="images/italy.jpg" style="width:100%">
+            <div class="overlay">
+                <div class="text"><b>Jack Ward</b></div>
+            </div>
+        </div>
+
+        <div class="NewYork">
+            <img src="images/NewYork.jpg" style="width:100%">
+            <div class="overlay">
+                <div class="text"><b>Maximilien T'Scharner</b></div>
+            </div>
+        </div>
+
+        <div class="trail">
+            <img src="images/trail.jpg" style="width:100%">
+            <div class="overlay">
+                <div class="text"><b>Holly Mandarich</b></div>
+            </div>
+        </div>
+
+        <div class="night">
+            <img src="images/night.jpg" style="width:100%">
+            <div class="overlay">
+                <div class="text"><b>Pawel Nolbert</b></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<br>
+<br>
+
+<div class="animacoes">
+    <img src="images/roma.avif" class="roma">
+    <img src="images/paris.avif">
+    <img src="images/praga.avif">
+    <img src="images/lisboa.avif">
 </div>
 </body>
 </html>
